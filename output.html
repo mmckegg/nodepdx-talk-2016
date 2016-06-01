@@ -11,13 +11,12 @@
       font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
       overflow: hidden;
       color: #CCC;
-      font-weight: lighter;
       font-size: 40px;
       letter-spacing: 1px;
     }
 
     h1, h2, h3 {
-      font-weight: lighter;
+      font-weight: normal;
       text-align: center;
       color: white;
       margin: 20px 0;
@@ -27,6 +26,11 @@
     p {
       max-width: 80%;
       text-align: center;
+      margin-bottom: 20px
+    }
+
+    p + p {
+      margin-top: 20px
     }
 
     a {
@@ -41,10 +45,10 @@
 
     strong {
       color: white;
-      font-weight: normal;
     }
 
     h1 strong {
+      font-weight: normal;
       color: #6AFF00;
     }
 
@@ -53,10 +57,12 @@
     }
 
     h1 {
+      font-weight: normal;
       font-size: 300%;
     }
 
     h2 {
+      font-weight: normal;
       font-size: 200%;
     }
 
@@ -255,9 +261,8 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <p>with <a href="https://twitter.com/MattMcKegg" target="_blank">@MattMcKegg</a></p>
 <h1>I make <strong>music</strong> with <strong>computers</strong>.</h1>
 <h1>I also make <strong><em>software</em></strong> to make <strong>music</strong> with <strong>computers</strong>.</h1>
-<h2>Loop Drop</h2>
-<p><img src="http://loopjs.com/loop-drop.png" alt=""></p>
-<p><a href="http://loopjs.com" target="_blank">http://loopjs.com</a></p>
+<h2><strong>Loop Drop</strong> — <a href="http://loopjs.com" target="_blank">loopjs.com</a></h2>
+<p><img src="logo.png" alt=""></p>
 <blockquote>
 <blockquote>
 <p>Play some tunes and give a quick overview of how it works.</p>
@@ -293,7 +298,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <blockquote>
 <p>Web Audio has allowed me to discover a much more enjoyable music process, and gives my complete control over the direction I go.</p>
 </blockquote>
-<h1>Electron - <strong>Chromium</strong> + <strong>Node.js</strong></h1>
+<h2>Electron is <strong>Chromium + Node.js</strong></h2>
 <p>You can have <strong>all the things</strong>!</p>
 <p><a href="http://electron.atom.io" target="_blank">http://electron.atom.io</a></p>
 <blockquote>
@@ -331,17 +336,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <li><a href="http://github.com/mmckegg/loop-drop-app" target="_blank">github.com/mmckegg/loop-drop-app</a></li>
 <li><a href="http://patreon.com/MattMcKegg" target="_blank">patreon.com/MattMcKegg</a></li>
 </ul>
-<p><img src="http://loopjs.com/heart.png" alt=""></p>
-<h1>A couple more <strong>magic tricks</strong>...</h1>
-<h2><strong>Host a local website</strong> from your app.</h2>
-<blockquote>
-<p>Recently, I wanted to build a visualizer component for loop drop. Because electron gives you access to all of the node modules, you can use <code>http</code> to serve the visualizer directly from the app for access on the local area network.</p>
-</blockquote>
-<h2>Talk <strong>directly</strong> to unusual devices.</h2>
-<p><strong>APA102 LED</strong> strip over <strong>SPI</strong>.</p>
-<blockquote>
-<p>Let's modify the visualizer so that instead of broadcasting out on a websocket, it instead is used to drive these LED lights.</p>
-</blockquote>
+<p><img src="heart.png" alt=""></p>
 <h1><strong>Web Audio School</strong> Workshop</h1>
 <p>Keen to start building your own Web Audio projects? Come to the workshop at <strong>11:30am</strong> today!</p>
 <h1>Thanks for listening!</h1>

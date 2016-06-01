@@ -7,11 +7,9 @@ with [@MattMcKegg](https://twitter.com/MattMcKegg)
 
 # I also make **_software_** to make **music** with **computers**.
 
-## Loop Drop
+## **Loop Drop** — loopjs.com
 
-![](http://loopjs.com/loop-drop.png)
-
-http://loopjs.com
+![](logo.png)
 
 
 >> Play some tunes and give a quick overview of how it works.
@@ -48,7 +46,7 @@ A co-evolution, me and my tool.
 
 > Web Audio has allowed me to discover a much more enjoyable music process, and gives my complete control over the direction I go.
 
-# Electron - **Chromium** + **Node.js**
+## Electron is **Chromium + Node.js**
 
 You can have **all the things**!
 
@@ -86,19 +84,7 @@ Loop Drop R&D **super secret\*** laboratory!
 - github.com/mmckegg/loop-drop-app
 - patreon.com/MattMcKegg
 
-![](http://loopjs.com/heart.png)
-
-# A couple more **magic tricks**...
-
-## **Host a local website** from your app.
-
-> Recently, I wanted to build a visualizer component for loop drop. Because electron gives you access to all of the node modules, you can use `http` to serve the visualizer directly from the app for access on the local area network.
-
-## Talk **directly** to unusual devices.
-
-**APA102 LED** strip over **SPI**.
-
-> Let's modify the visualizer so that instead of broadcasting out on a websocket, it instead is used to drive these LED lights.
+![](heart.png)
 
 # **Web Audio School** Workshop
 
