@@ -1,4 +1,4 @@
-I Play The JavaScript
+I Play the JavaScript
 ===
 
 with [@MattMcKegg](https://twitter.com/MattMcKegg)
@@ -10,7 +10,6 @@ with [@MattMcKegg](https://twitter.com/MattMcKegg)
 ## **Loop Drop** — loopjs.com
 
 ![](logo.png)
-
 
 >> Play some tunes and give a quick overview of how it works.
 
