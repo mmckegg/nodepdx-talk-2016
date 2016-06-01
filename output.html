@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <title>Slides</title>
+  <style>
+    body, html {
+      height: 100%;
+      background: #222;
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+      overflow: hidden;
+      color: #CCC;
+      font-weight: lighter;
+      font-size: 40px;
+      letter-spacing: 1px;
+    }
+
+    h1, h2, h3 {
+      font-weight: lighter;
+      text-align: center;
+      color: white;
+      margin: 20px 0;
+      max-width: 80%;
+    }
+
+    p {
+      max-width: 80%;
+      text-align: center;
+    }
+
+    a {
+      color: #00FFEC;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    ul {
+      max-width: 70%;
+    }
+
+    strong {
+      color: white;
+      font-weight: normal;
+    }
+
+    h1 strong {
+      color: #6AFF00;
+    }
+
+    h2 strong {
+      color: #FFB500;
+    }
+
+    h1 {
+      font-size: 300%;
+    }
+
+    h2 {
+      font-size: 200%;
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 60%;
+      margin: -60px 0;
+    }
+
+    .coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
+      opacity: 0.9 !important;
+    }
+
+    .Viewer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .Viewer > * {
+      display: none
+    }
+
+    .Viewer > .-active {
+      display: block
+    }
+
+    .Viewer > blockquote {
+      display: none !important
+    }
+
+    pre {
+      min-width: 60%;
+      max-height: 80%;
+      overflow: auto;
+      padding: 10px;
+      background: #111;
+      border: 1px solid #333;
+      color: #DDD;
+    }
+
+    pre > code {
+      display: block;
+      font: 20px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+      padding: 10px;
+      padding-bottom: 100px;
+    }
+
+    p code, ul code {
+      padding: 0 10px;
+      background: #111;
+      color: #EEE;
+      border: 1px solid #333;
+      font: 80% 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    }
+
+    ::selection {
+      background: #AAA;
+    }
+
+    /*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-keyword,
+.hljs-literal,
+.hljs-strong,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.nginx .hljs-title,
+.tex .hljs-special {
+  color: #f92672;
+}
+
+.hljs {
+  color: #ddd;
+}
+
+.hljs .hljs-constant,
+.asciidoc .hljs-code,
+.markdown .hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-code,
+.hljs-class .hljs-title,
+.hljs-header {
+  color: white;
+}
+
+.hljs-link_label,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-value,
+.hljs-regexp {
+  color: #bf79db;
+}
+
+.hljs-link_url,
+.hljs-tag .hljs-value,
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-emphasis,
+.hljs-type,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-name {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.smartquote,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-decorator,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-doctag,
+.hljs-title,
+.hljs-header,
+.hljs-type,
+.vbscript .hljs-built_in,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class='Viewer'>
+    <h1>I Play The JavaScript</h1>
+<p>with <a href="https://twitter.com/MattMcKegg" target="_blank">@MattMcKegg</a></p>
+<h1>I make <strong>music</strong> with <strong>computers</strong>.</h1>
+<h1>I also make <strong><em>software</em></strong> to make <strong>music</strong> with <strong>computers</strong>.</h1>
+<h2>Loop Drop</h2>
+<p><img src="http://loopjs.com/loop-drop.png" alt=""></p>
+<p><a href="http://loopjs.com" target="_blank">http://loopjs.com</a></p>
+<blockquote>
+<blockquote>
+<p>Play some tunes and give a quick overview of how it works.</p>
+</blockquote>
+</blockquote>
+<h1>So how did this happen?</h1>
+<h2><strong>Recording anxiety</strong></h2>
+<blockquote>
+<p>Initially I was just extending my existing tools. I really liked a lot of aspects of Native Instruments’s Maschine, however I found recording new loops on the fly to be unnecessarily difficult. I suffer from acute recording anxiety. I’m jamming away a cool riff, and it sounds awesome, then I hit record and my figures turn to jelly, and it comes out all wrong.</p>
+</blockquote>
+<blockquote>
+<p>So my first version was actually just a Node.js script that allowed me more control over input, storing all MIDI in a buffer, and then allowing me to go back in time and create loops after I played them, along with some realtime loop transform controls. At this stage, I was still just trying to reproduce my “studio” style music but performed live. But I managed to develop a lot of the core looping concepts that still exist in Loop Drop today.</p>
+</blockquote>
+<h2><strong>How hard can it be?</strong></h2>
+<p>Besides, those other programs are way to complicated!</p>
+<blockquote>
+<p>I suppose the real reason I started trying to replace NI Maschine and Ableton Live with Web Audio was mainly just to see if I could. There were definitely things that I disliked about these programs, such as the inability to load multiple songs and mix between, converting existing songs to play live was time consuming, and I wanted to get back to basics with sound design - these big programs just do too much, and it’s way too tempting to just use the complex presets available.</p>
+</blockquote>
+<h2><strong>A new way to play.</strong></h2>
+<p><strong><em>&quot;One true version&quot;</em> no more!</strong></p>
+<blockquote>
+<p>As my own MIDI looping system, and my own sound generation started to come together, I stumbled on a whole new way to play. Rather than having the “one true version” of a song, they become more like collections of ideas, moments. My performances took on a major improvisatory quality. I realised I could make “my studio process” and my “live performance” the same thing.</p>
+</blockquote>
+<h2>My <strong>studio process</strong> and my <strong>live performance</strong> can be the <strong><em>same thing</em></strong></h2>
+<blockquote>
+<p>At this point I added “preroll audio recording”, which meant that Loop Drop was always recording the master output of everything you play — all you have to do is hit save. I recorded an entire album this way. It was such a refreshing change from the traditional electronic music production style where you slave over every teeny detail in a DAW. And it also means I already have my live sets ready to go!</p>
+</blockquote>
+<h2>JavaScript the <strong>enabler</strong>.</h2>
+<p>A co-evolution, me and my tool.</p>
+<blockquote>
+<p>So it has been a co-evolution — me and my tool. I continue to tweak my code as I encounter issues / have new ideas, and those changes inform new ideas in a crazy cycle of inspiration! As it stands now, there is no way that I could go back.</p>
+</blockquote>
+<blockquote>
+<p>Web Audio has allowed me to discover a much more enjoyable music process, and gives my complete control over the direction I go.</p>
+</blockquote>
+<h1>Electron - <strong>Chromium</strong> + <strong>Node.js</strong></h1>
+<p>You can have <strong>all the things</strong>!</p>
+<p><a href="http://electron.atom.io" target="_blank">http://electron.atom.io</a></p>
+<blockquote>
+<blockquote>
+<p>Explain what electron is, and who makes it.</p>
+</blockquote>
+</blockquote>
+<h1>Why is Loop Drop <em>just</em> a <strong>desktop</strong> application?</h1>
+<h2>The web is <strong>restrictive</strong>.</h2>
+<p>Disk-space, bandwidth, speed, connectivity.</p>
+<blockquote>
+<p>There are space limitations, speed/bandwidth issues, and you need to be online. I didn't build this app using web tech for networking, I did it because I like the platform.</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Show how loop drop can store files directly on the users computer, record lossless wav output, and stream lossless wav from disk.</p>
+</blockquote>
+</blockquote>
+<h2>The web <strong>requires responsibility</strong>.</h2>
+<p>Hosting, support, up-time. Subscriptions. Monetization. Supporting multiple browsers.</p>
+<blockquote>
+<p>I'm just not interested in running a cloud based startup.</p>
+</blockquote>
+<blockquote>
+<p>Software puts the user back in control. If I stop making loop drop, it doesn't just stop working.</p>
+</blockquote>
+<h1>DESTROY WITH SCIENCE</h1>
+<p>Loop Drop R&amp;D <strong>super secret*</strong> laboratory!</p>
+<ul>
+<li><a href="http://soundcloud.com/destroy-with-science" target="_blank">soundcloud.com/destroy-with-science</a></li>
+<li><a href="http://destroywithscience.bandcamp.com/album/droptivist" target="_blank">destroywithscience.bandcamp.com/album/droptivist</a></li>
+</ul>
+<h1>Contributing</h1>
+<ul>
+<li><a href="http://github.com/mmckegg/loop-drop-app" target="_blank">github.com/mmckegg/loop-drop-app</a></li>
+<li><a href="http://patreon.com/MattMcKegg" target="_blank">patreon.com/MattMcKegg</a></li>
+</ul>
+<p><img src="http://loopjs.com/heart.png" alt=""></p>
+<h1>A couple more <strong>magic tricks</strong>...</h1>
+<h2><strong>Host a local website</strong> from your app.</h2>
+<blockquote>
+<p>Recently, I wanted to build a visualizer component for loop drop. Because electron gives you access to all of the node modules, you can use <code>http</code> to serve the visualizer directly from the app for access on the local area network.</p>
+</blockquote>
+<h2>Talk <strong>directly</strong> to unusual devices.</h2>
+<p><strong>APA102 LED</strong> strip over <strong>SPI</strong>.</p>
+<blockquote>
+<p>Let's modify the visualizer so that instead of broadcasting out on a websocket, it instead is used to drive these LED lights.</p>
+</blockquote>
+<h1><strong>Web Audio School</strong> Workshop</h1>
+<p>Keen to start building your own Web Audio projects? Come to the workshop at <strong>11:30am</strong> today!</p>
+<h1>Thanks for listening!</h1>
+<p>If you have questions, <em>come talk to me</em>! Or tweet <a href="http://twitter.com/MattMcKegg" target="_blank"><strong><em>@MattMcKegg</em></strong></a>.</p>
+<ul>
+<li><a href="http://loopjs.com" target="_blank">loopjs.com</a></li>
+<li><a href="http://github.com/mmckegg" target="_blank">github.com/mmckegg</a></li>
+<li><a href="http://destroywithscience.bandcamp.com/album/droptivist" target="_blank">destroywithscience.bandcamp.com/album/droptivist</a></li>
+<li><a href="http://soundcloud.com/destroy-with-science" target="_blank">soundcloud.com/destroy-with-science</a></li>
+</ul>
+
+  </div>
+  <script>
+    var viewer = document.querySelector('.Viewer')
+    var firstElement = viewer.firstElementChild
+    firstElement.classList.add('-active')
+    more(firstElement)
+
+    function copyAll (element) {
+      var range = document.createRange();
+      range.selectNodeContents(element);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range)
+      document.execCommand('copy')
+      sel.removeAllRanges();
+    }
+
+    function next () {
+      var active = viewer.querySelectorAll('.-active')
+      var nextElement = getNext(last(active))
+      if (nextElement) {
+        nextElement.classList.add('-active')
+        each(active, function (el) {
+          el.classList.remove('-active')
+        })
+        more(nextElement)
+      }
+    }
+
+    function prev () {
+      var active = viewer.querySelectorAll('.-active')
+      var prevElement = getPrev(first(active))
+      if (prevElement) {
+        prevElement.classList.add('-active')
+        each(active, function (el) {
+          el.classList.remove('-active')
+        })
+        more(prevElement)
+      }
+    }
+
+    function getNext (current) {
+      if (current) {
+        var nextElement = current.nextElementSibling
+        while (nextElement && !isHeading(nextElement)) {
+          nextElement = nextElement.nextElementSibling
+        }
+        return nextElement
+      }
+
+    }
+
+    function getPrev (current) {
+      if (current) {
+        var prevElement = current.previousElementSibling
+        while (prevElement && !isHeading(prevElement)) {
+          prevElement = prevElement.previousElementSibling
+        }
+        return prevElement
+      }
+    }
+
+    function more (current) {
+      if (current) {
+        var nextElement = current.nextElementSibling
+        while (nextElement && !isHeading(nextElement)) {
+          nextElement.classList.add('-active')
+          if (nextElement.tagName === 'PRE') {
+            nextElement.tabIndex = 0
+            nextElement.focus()
+            copyAll(nextElement)
+          }
+          nextElement = nextElement.nextElementSibling
+        }
+      }
+    }
+
+    function each (elements, fn) {
+      for (var i = 0; i < elements.length; i++) {
+        fn(elements[i])
+      }
+    }
+
+    function first (elements) {
+      if (elements.length) {
+        return elements[0]
+      }
+    }
+
+    function isHeading (element) {
+      return !!element.tagName.match(/^H[0-9]$/)
+    }
+
+    function last (elements) {
+      if (elements.length) {
+        return elements[elements.length-1]
+      }
+    }
+
+    document.onkeydown = function (e) {
+      if (e.keyCode === 39) { // right arrow
+        next()
+      } else if (e.keyCode === 37) { // left arrow
+        prev()
+      } else if (e.keyCode === 40) { // left arrow
+        more()
+      }
+    }
+  </script>
+</body>
+</html>
