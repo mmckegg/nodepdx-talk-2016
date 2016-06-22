@@ -67,9 +67,8 @@
     }
 
     img {
-      max-width: 90%;
-      max-height: 60%;
-      margin: -60px 0;
+      max-height: 65vh;
+      margin: -10px 0;
     }
 
     .coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
@@ -138,6 +137,12 @@
     var firstElement = viewer.firstElementChild
     firstElement.classList.add('-active')
     more(firstElement)
+
+    Array.from(document.querySelectorAll('p')).forEach(function (element) {
+      if (element.childNodes.length === 1 && element.childNodes[0].nodeName === 'IMG') {
+        element.parentNode.replaceChild(element.childNodes[0], element)
+      }
+    })
 
     function copyAll (element) {
       var range = document.createRange();
