@@ -5,6 +5,8 @@ with [@MattMcKegg](https://twitter.com/MattMcKegg)
 
 > Speaker notes in quotes. View the compiled slides at https://rawgit.com/mmckegg/nodepdx-talk-2016/master/output.html
 
+> Watch the video: https://www.youtube.com/watch?v=XdIJFXvguJI
+
 # I make **music** with **computers**.
 
 # I also make **_software_** to make **music** with **computers**.
